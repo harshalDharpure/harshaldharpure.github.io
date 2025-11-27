@@ -164,14 +164,13 @@ ul {
 }
 
 .logo {
-    font-family: var(--font-mono);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--text-primary);
     transition: color var(--transition);
 }
 
-.logo-bracket {
+.logo:hover {
     color: var(--accent);
 }
 
