@@ -4,31 +4,31 @@
 
 /* CSS Variables */
 :root {
-    /* Light Theme - Warm */
-    --bg-primary: #fdf8f5;
+    /* Light Theme - Cool Blue */
+    --bg-primary: #f5f8fc;
     --bg-secondary: #ffffff;
-    --bg-tertiary: #fef4ed;
-    --text-primary: #2d1810;
-    --text-secondary: #5a4035;
-    --text-muted: #8a7060;
-    --accent: #e85d04;
-    --accent-light: #f48c42;
-    --accent-dark: #c04d00;
-    --accent-gradient: linear-gradient(135deg, #e85d04 0%, #f7931e 100%);
+    --bg-tertiary: #edf2f9;
+    --text-primary: #1a2332;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-dark: #2563eb;
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
     --success: #10b981;
-    --border: rgba(45, 24, 16, 0.08);
+    --border: rgba(59, 130, 246, 0.1);
     --card-bg: #ffffff;
-    --card-shadow: 0 4px 24px rgba(45, 24, 16, 0.08);
-    --code-bg: #1a1210;
+    --card-shadow: 0 4px 24px rgba(59, 130, 246, 0.08);
+    --code-bg: #1e293b;
     
-    /* Gradient Orbs - Warm */
-    --orb-1: radial-gradient(circle, rgba(232, 93, 4, 0.12) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(247, 147, 30, 0.1) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(255, 140, 66, 0.08) 0%, transparent 70%);
+    /* Gradient Orbs - Blue */
+    --orb-1: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    --orb-2: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    --orb-3: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
     
     /* Background Patterns */
-    --pattern-dot: rgba(232, 93, 4, 0.15);
-    --grid-line: rgba(232, 93, 4, 0.05);
+    --pattern-dot: rgba(59, 130, 246, 0.12);
+    --grid-line: rgba(59, 130, 246, 0.04);
     
     /* Fonts */
     --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,31 +38,31 @@
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Theme - Warm */
+/* Dark Theme - Cool Blue */
 [data-theme="dark"] {
-    --bg-primary: #0f0a0a;
-    --bg-secondary: #1a1210;
-    --bg-tertiary: #251c18;
-    --text-primary: #f5f0ed;
-    --text-secondary: #c7b8b0;
-    --text-muted: #a08880;
-    --accent: #ff6b35;
-    --accent-light: #ff8c5a;
-    --accent-dark: #e55a25;
-    --accent-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    --bg-primary: #0a0f1a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #60a5fa;
+    --accent-light: #93c5fd;
+    --accent-dark: #3b82f6;
+    --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     --success: #34d399;
     --border: rgba(255, 255, 255, 0.08);
-    --card-bg: #1a1210;
+    --card-bg: #111827;
     --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-    --code-bg: #0d0908;
+    --code-bg: #0f172a;
     
-    --orb-1: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(247, 147, 30, 0.12) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(255, 87, 51, 0.08) 0%, transparent 70%);
+    --orb-1: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, transparent 70%);
+    --orb-2: radial-gradient(circle, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+    --orb-3: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
     
     /* Background Patterns */
-    --pattern-dot: rgba(255, 107, 53, 0.2);
-    --grid-line: rgba(255, 107, 53, 0.06);
+    --pattern-dot: rgba(96, 165, 250, 0.15);
+    --grid-line: rgba(96, 165, 250, 0.05);
 }
 
 /* Reset & Base */
@@ -272,7 +272,7 @@ strong {
 
 .btn-hire:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(232, 93, 4, 0.35);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
 }
 
 /* Mobile Navigation */
@@ -534,7 +534,7 @@ strong {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(232, 93, 4, 0.35);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.35);
 }
 
 .btn-secondary {
@@ -616,7 +616,7 @@ strong {
     background: var(--code-bg);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--card-shadow), 0 0 60px rgba(232, 93, 4, 0.1);
+    box-shadow: var(--card-shadow), 0 0 60px rgba(59, 130, 246, 0.15);
     position: relative;
 }
 
@@ -836,7 +836,7 @@ strong {
 
 .interest-tags span {
     padding: 6px 14px;
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     color: var(--accent);
     border-radius: 20px;
     font-size: 13px;
@@ -868,7 +868,7 @@ strong {
 
 .research-card.featured {
     border-color: var(--accent);
-    background: linear-gradient(135deg, rgba(232, 93, 4, 0.08) 0%, rgba(247, 147, 30, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
 }
 
 .research-badge {
@@ -887,7 +887,7 @@ strong {
     width: 56px;
     height: 56px;
     border-radius: 14px;
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1005,7 +1005,7 @@ strong {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1123,8 +1123,8 @@ strong {
 
 .project-card.featured {
     grid-column: span 2;
-    background: linear-gradient(135deg, rgba(232, 93, 4, 0.1) 0%, rgba(247, 147, 30, 0.04) 100%);
-    border-color: rgba(232, 93, 4, 0.35);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.04) 100%);
+    border-color: rgba(59, 130, 246, 0.35);
 }
 
 .project-header {
@@ -1138,7 +1138,7 @@ strong {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1167,7 +1167,7 @@ strong {
 
 .project-link:hover {
     color: var(--accent);
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
 }
 
 .project-label {
@@ -1274,9 +1274,9 @@ strong {
 }
 
 .skill-tag.primary {
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     color: var(--accent);
-    border: 1px solid rgba(232, 93, 4, 0.25);
+    border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 /* ========================================
@@ -1307,7 +1307,7 @@ strong {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(232, 93, 4, 0.15) 0%, rgba(247, 147, 30, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1368,7 +1368,7 @@ strong {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: rgba(232, 93, 4, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
