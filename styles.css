@@ -4,31 +4,31 @@
 
 /* CSS Variables */
 :root {
-    /* Light Theme - Cool Blue */
-    --bg-primary: #e8f4fc;
-    --bg-secondary: #f0f7ff;
-    --bg-tertiary: #dbeafe;
-    --text-primary: #1e3a5f;
-    --text-secondary: #3b5998;
-    --text-muted: #6b8cae;
-    --accent: #2563eb;
-    --accent-light: #3b82f6;
-    --accent-dark: #1d4ed8;
-    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    /* Light Theme - Very Light */
+    --bg-primary: #fafbff;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f5f7fa;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-dark: #2563eb;
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
     --success: #10b981;
-    --border: rgba(37, 99, 235, 0.15);
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-shadow: 0 4px 24px rgba(37, 99, 235, 0.12);
-    --code-bg: #1e3a5f;
+    --border: rgba(0, 0, 0, 0.06);
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --code-bg: #1e293b;
     
-    /* Gradient Orbs - Blue */
-    --orb-1: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    /* Gradient Orbs - Very Subtle */
+    --orb-1: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    --orb-2: radial-gradient(circle, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+    --orb-3: radial-gradient(circle, rgba(96, 165, 250, 0.03) 0%, transparent 70%);
     
-    /* Background Patterns */
-    --pattern-dot: rgba(37, 99, 235, 0.18);
-    --grid-line: rgba(37, 99, 235, 0.08);
+    /* Background Patterns - Very Subtle */
+    --pattern-dot: rgba(59, 130, 246, 0.06);
+    --grid-line: rgba(59, 130, 246, 0.02);
     
     /* Fonts */
     --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,31 +38,31 @@
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Theme - Cool Blue */
+/* Dark Theme - Clean Dark */
 [data-theme="dark"] {
-    --bg-primary: #0a1628;
-    --bg-secondary: #0f2042;
-    --bg-tertiary: #162d50;
-    --text-primary: #e0f2fe;
-    --text-secondary: #7dd3fc;
-    --text-muted: #38bdf8;
-    --accent: #38bdf8;
-    --accent-light: #7dd3fc;
-    --accent-dark: #0ea5e9;
-    --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #a78bfa 100%);
+    --bg-primary: #0f0f14;
+    --bg-secondary: #1a1a24;
+    --bg-tertiary: #24242e;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a0a0b0;
+    --text-muted: #707080;
+    --accent: #60a5fa;
+    --accent-light: #93c5fd;
+    --accent-dark: #3b82f6;
+    --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     --success: #34d399;
-    --border: rgba(56, 189, 248, 0.15);
-    --card-bg: rgba(15, 32, 66, 0.9);
-    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-    --code-bg: #061022;
+    --border: rgba(255, 255, 255, 0.06);
+    --card-bg: #1a1a24;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --code-bg: #12121a;
     
-    --orb-1: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+    --orb-1: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
+    --orb-2: radial-gradient(circle, rgba(167, 139, 250, 0.06) 0%, transparent 70%);
+    --orb-3: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
     
-    /* Background Patterns */
-    --pattern-dot: rgba(56, 189, 248, 0.2);
-    --grid-line: rgba(56, 189, 248, 0.08);
+    /* Background Patterns - Very Subtle */
+    --pattern-dot: rgba(96, 165, 250, 0.08);
+    --grid-line: rgba(96, 165, 250, 0.03);
 }
 
 /* Reset & Base */
