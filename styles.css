@@ -4,31 +4,31 @@
 
 /* CSS Variables */
 :root {
-    /* Light Theme - Very Light */
-    --bg-primary: #fafbff;
+    /* Light Theme - Pure White */
+    --bg-primary: #ffffff;
     --bg-secondary: #ffffff;
-    --bg-tertiary: #f5f7fa;
+    --bg-tertiary: #f8f9fa;
     --text-primary: #1a1a2e;
     --text-secondary: #4a5568;
     --text-muted: #718096;
-    --accent: #3b82f6;
-    --accent-light: #60a5fa;
-    --accent-dark: #2563eb;
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --accent: #2563eb;
+    --accent-light: #3b82f6;
+    --accent-dark: #1d4ed8;
+    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
     --success: #10b981;
-    --border: rgba(0, 0, 0, 0.06);
+    --border: rgba(0, 0, 0, 0.08);
     --card-bg: #ffffff;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     --code-bg: #1e293b;
     
-    /* Gradient Orbs - Very Subtle */
-    --orb-1: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(96, 165, 250, 0.03) 0%, transparent 70%);
+    /* Gradient Orbs - Disabled */
+    --orb-1: transparent;
+    --orb-2: transparent;
+    --orb-3: transparent;
     
-    /* Background Patterns - Very Subtle */
-    --pattern-dot: rgba(59, 130, 246, 0.06);
-    --grid-line: rgba(59, 130, 246, 0.02);
+    /* Background Patterns - Disabled */
+    --pattern-dot: transparent;
+    --grid-line: transparent;
     
     /* Fonts */
     --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -40,29 +40,30 @@
 
 /* Dark Theme - Clean Dark */
 [data-theme="dark"] {
-    --bg-primary: #0f0f14;
-    --bg-secondary: #1a1a24;
-    --bg-tertiary: #24242e;
-    --text-primary: #f0f0f5;
-    --text-secondary: #a0a0b0;
-    --text-muted: #707080;
-    --accent: #60a5fa;
-    --accent-light: #93c5fd;
-    --accent-dark: #3b82f6;
-    --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    --bg-primary: #111111;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #222222;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --text-muted: #707070;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-dark: #2563eb;
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
     --success: #34d399;
-    --border: rgba(255, 255, 255, 0.06);
-    --card-bg: #1a1a24;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --code-bg: #12121a;
+    --border: rgba(255, 255, 255, 0.08);
+    --card-bg: #1a1a1a;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --code-bg: #0d0d0d;
     
-    --orb-1: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
-    --orb-2: radial-gradient(circle, rgba(167, 139, 250, 0.06) 0%, transparent 70%);
-    --orb-3: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+    /* Gradient Orbs - Disabled */
+    --orb-1: transparent;
+    --orb-2: transparent;
+    --orb-3: transparent;
     
-    /* Background Patterns - Very Subtle */
-    --pattern-dot: rgba(96, 165, 250, 0.08);
-    --grid-line: rgba(96, 165, 250, 0.03);
+    /* Background Patterns - Disabled */
+    --pattern-dot: transparent;
+    --grid-line: transparent;
 }
 
 /* Reset & Base */
