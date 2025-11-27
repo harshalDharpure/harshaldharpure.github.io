@@ -1,160 +1,170 @@
-/* ============================================
-   HARSHAL DHARPURE - TECHNICAL PORTFOLIO
-   Theme Toggle & Interactions
-   ============================================ */
+// ========================================
+// AI Researcher Portfolio - JavaScript
+// ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
-    initMobileNav();
+    initMobileMenu();
     initSmoothScroll();
+    initScrollAnimations();
     initNavbarScroll();
 });
 
-/* ============================================
-   THEME TOGGLE (Dark/Light Mode)
-   ============================================ */
+// ========================================
+// Theme Toggle
+// ========================================
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', savedTheme);
+    // Check for saved preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Add a subtle animation
-            document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
-        });
+    if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+    } else if (systemDark) {
+        html.setAttribute('data-theme', 'dark');
     }
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
 }
 
-/* ============================================
-   MOBILE NAVIGATION
-   ============================================ */
-function initMobileNav() {
+// ========================================
+// Mobile Menu
+// ========================================
+function initMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
     
-    if (!mobileToggle || !mobileMenu) return;
-    
     mobileToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         mobileToggle.classList.toggle('active');
-        
-        // Animate hamburger
-        const spans = mobileToggle.querySelectorAll('span');
-        if (mobileMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
     });
     
-    // Close menu when clicking a link
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             mobileToggle.classList.remove('active');
-            const spans = mobileToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
         });
     });
 }
 
-/* ============================================
-   SMOOTH SCROLL
-   ============================================ */
+// ========================================
+// Smooth Scroll
+// ========================================
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href === '#') return;
-            
-            const target = document.querySelector(href);
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                e.preventDefault();
                 const offset = 80;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
+                const targetPosition = target.offsetTop - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
 }
 
-/* ============================================
-   NAVBAR SCROLL EFFECT
-   ============================================ */
+// ========================================
+// Scroll Animations
+// ========================================
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+    
+    // Elements to animate
+    const animateElements = document.querySelectorAll(
+        '.section-title, .about-text, .info-card, .research-card, ' +
+        '.exp-card, .project-card, .skill-group, .award-card, .contact-card'
+    );
+    
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Add CSS for animated elements
+const style = document.createElement('style');
+style.textContent = `
+    .animate-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);
+
+// ========================================
+// Navbar Scroll Effect
+// ========================================
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    
     let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
+        const currentScroll = window.pageYOffset;
         
-        if (currentScroll > 50) {
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        if (currentScroll > 100) {
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
         } else {
             navbar.style.boxShadow = 'none';
         }
         
         lastScroll = currentScroll;
-    }, { passive: true });
+    });
 }
 
-/* ============================================
-   ANIMATE ON SCROLL (Simple)
-   ============================================ */
-function initScrollAnimation() {
-    const elements = document.querySelectorAll('.animate-in');
+// ========================================
+// Active Navigation Highlight
+// ========================================
+function initActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
             }
         });
-    }, { threshold: 0.1 });
-    
-    elements.forEach(el => observer.observe(el));
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
 }
 
-/* ============================================
-   CONSOLE MESSAGE
-   ============================================ */
-console.log(`
-%c👋 Hey there!
-
-%cWelcome to Harshal Dharpure's Portfolio
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🎓 M.Tech AI @ IIT Patna
-🔬 NLP | LLMs | RAG | Multimodal AI
-💼 Open to Opportunities
-
-📧 harshaldharpure9922@gmail.com
-🔗 linkedin.com/in/harshaldharpure
-🐙 github.com/harshalDharpure
-
-%cBuilt with ❤️
-`,
-'font-size: 20px; font-weight: bold;',
-'font-size: 14px; color: #58a6ff;',
-'font-size: 12px; color: #8b949e;'
-);
+// Initialize active nav
+initActiveNav();
