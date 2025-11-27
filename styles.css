@@ -1090,7 +1090,7 @@ strong {
    ======================================== */
 .awards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -1139,6 +1139,67 @@ strong {
 .award-card span {
     font-size: 12px;
     color: var(--text-muted);
+}
+
+.award-card.featured {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 165, 0, 0.08) 100%);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.award-card.featured h3 {
+    color: #ffd700;
+}
+
+/* Organizations Section */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.org-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.org-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(0, 102, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.org-icon i {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.org-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.org-card p {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.org-card span {
+    font-size: 13px;
+    color: var(--text-secondary);
 }
 
 /* ========================================
@@ -1291,6 +1352,10 @@ strong {
     
     .awards-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .org-grid {
+        grid-template-columns: 1fr;
     }
 }
 
