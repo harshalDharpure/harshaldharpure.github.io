@@ -3,33 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshal Dharpure | AI Engineer & Researcher</title>
-    <meta name="description" content="M.Tech AI at IIT Patna | NLP | RAG | LLMs | DevOps Engineer">
+    <title>Harshal Dharpure | AI Engineer & NLP Researcher</title>
+    <meta name="description" content="M.Tech AI at IIT Patna | NLP | RAG | LLMs | Building Intelligent Systems">
+    <meta name="keywords" content="AI Engineer, NLP Researcher, Machine Learning, LLMs, RAG, IIT Patna">
+    <meta name="author" content="Harshal Dharpure">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Harshal Dharpure | AI Engineer">
+    <meta property="og:description" content="M.Tech AI at IIT Patna | Building Intelligent Systems">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cursor Effect -->
-    <div class="cursor-glow"></div>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
     
+    <!-- Mouse Follower -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="loader-text">
+                <span data-text="H">H</span>
+                <span data-text="A">A</span>
+                <span data-text="R">R</span>
+                <span data-text="S">S</span>
+                <span data-text="H">H</span>
+                <span data-text="A">A</span>
+                <span data-text="L">L</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>HD<span class="logo-bracket">/&gt;</span>
+                <div class="logo-wrapper">
+                    <span class="logo-text">HD</span>
+                    <span class="logo-dot"></span>
+                </div>
             </a>
             <div class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#awards" class="nav-link">Awards</a>
-                <a href="#contact" class="nav-link nav-cta">Let's Talk</a>
+                <div class="nav-menu-inner">
+                    <a href="#about" class="nav-link" data-text="About">About</a>
+                    <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+                    <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+                    <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+                    <a href="#awards" class="nav-link" data-text="Awards">Awards</a>
+                    <a href="#contact" class="nav-cta">
+                        <span>Hire Me</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <button class="nav-toggle" id="navToggle">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,118 +85,200 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-            <div class="grid-overlay"></div>
-        </div>
+        <div class="hero-particles" id="particles"></div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="status-dot"></span>
-                <span>Available for Research & Collaboration</span>
+            <div class="hero-badge animate-on-scroll">
+                <div class="badge-pulse"></div>
+                <span class="badge-text">Open to Opportunities</span>
             </div>
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I'm</span>
-                <span class="title-name">Harshal Dharpure</span>
+            
+            <div class="hero-intro animate-on-scroll">
+                <span class="intro-line"></span>
+                <span class="intro-text">Hello, I'm</span>
+            </div>
+            
+            <h1 class="hero-title animate-on-scroll">
+                <span class="title-first">Harshal</span>
+                <span class="title-last">Dharpure</span>
             </h1>
-            <p class="hero-subtitle">
-                <span class="typewriter" id="typewriter"></span>
-                <span class="cursor">|</span>
+            
+            <div class="hero-roles animate-on-scroll">
+                <div class="role-wrapper">
+                    <span class="role-static">I'm an</span>
+                    <div class="role-slider">
+                        <div class="role-slide active">AI Engineer</div>
+                        <div class="role-slide">NLP Researcher</div>
+                        <div class="role-slide">LLM Specialist</div>
+                        <div class="role-slide">RAG Developer</div>
+                        <div class="role-slide">DevOps Engineer</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="hero-description animate-on-scroll">
+                Currently pursuing <span class="highlight-text">M.Tech in AI</span> at 
+                <span class="highlight-text">IIT Patna</span>, crafting intelligent systems 
+                that push the boundaries of what's possible with 
+                <span class="highlight-text">NLP</span> and <span class="highlight-text">Large Language Models</span>.
             </p>
-            <p class="hero-description">
-                M.Tech AI @ <span class="highlight">IIT Patna</span> • Building intelligent systems at the intersection of 
-                <span class="highlight">NLP</span>, <span class="highlight">LLMs</span>, and <span class="highlight">RAG</span>
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View My Work</span>
-                    <i class="fas fa-arrow-right"></i>
+            
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat-item">
+                    <span class="stat-number counter" data-target="2">0</span>
+                    <span class="stat-label">IIT Internships</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number counter" data-target="4">0</span>
+                    <span class="stat-label">Hackathon Wins</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number counter" data-target="1">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta animate-on-scroll">
+                <a href="#projects" class="btn btn-primary magnetic">
+                    <span class="btn-text">View My Work</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-down"></i></span>
+                    <span class="btn-bg"></span>
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Get In Touch</span>
+                <a href="mailto:harshaldharpure9922@gmail.com" class="btn btn-outline magnetic">
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                 </a>
             </div>
-            <div class="hero-social">
-                <a href="https://linkedin.com/in/harshaldharpure" target="_blank" class="social-link" aria-label="LinkedIn">
+            
+            <div class="hero-social animate-on-scroll">
+                <a href="https://linkedin.com/in/harshaldharpure" target="_blank" class="social-link magnetic" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
+                    <span class="social-tooltip">LinkedIn</span>
                 </a>
-                <a href="https://github.com/harshalDharpure" target="_blank" class="social-link" aria-label="GitHub">
+                <a href="https://github.com/harshalDharpure" target="_blank" class="social-link magnetic" aria-label="GitHub">
                     <i class="fab fa-github"></i>
+                    <span class="social-tooltip">GitHub</span>
                 </a>
-                <a href="mailto:harshaldharpure9922@gmail.com" class="social-link" aria-label="Email">
+                <a href="mailto:harshaldharpure9922@gmail.com" class="social-link magnetic" aria-label="Email">
                     <i class="fas fa-envelope"></i>
+                    <span class="social-tooltip">Email</span>
+                </a>
+                <a href="tel:+918080071581" class="social-link magnetic" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                    <span class="social-tooltip">Call</span>
                 </a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
+        
+        <div class="hero-scroll">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
             </div>
+            <span class="scroll-text">Scroll to explore</span>
         </div>
+        
+        <div class="hero-gradient"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// ABOUT ME</span>
-                <h2 class="section-title">Turning Data Into Intelligence</h2>
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    About Me
+                </h2>
             </div>
+            
             <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-intro">
-                        I'm a passionate <span class="text-gradient">AI/ML Engineer</span> and <span class="text-gradient">NLP Researcher</span> 
-                        currently pursuing M.Tech in Artificial Intelligence at IIT Patna.
-                    </p>
-                    <p class="about-text">
-                        My journey spans from conducting cutting-edge NLP research at premier IITs to building 
-                        production-grade DevOps infrastructure at Beacon Healthcare. I specialize in Large Language Models, 
-                        Retrieval-Augmented Generation, and Multimodal AI systems.
-                    </p>
-                    <p class="about-text">
-                        When I'm not training models or optimizing pipelines, you'll find me exploring the latest 
-                        advancements in AI safety and contributing to open-source projects.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="2">0</span>
-                            <span class="stat-label">IIT Research Internships</span>
+                <div class="about-image animate-on-scroll">
+                    <div class="image-frame">
+                        <div class="frame-border"></div>
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="placeholder-rings">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="4">0</span>
-                            <span class="stat-label">Hackathon Awards</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="1">0</span><span class="stat-suffix">+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>NLP Expert</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-robot"></i>
+                        <span>LLM Specialist</span>
                     </div>
                 </div>
-                <div class="about-visual">
-                    <div class="code-window">
-                        <div class="window-header">
-                            <div class="window-dots">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
+                
+                <div class="about-content">
+                    <div class="about-text animate-on-scroll">
+                        <p class="lead">
+                            I'm a passionate <span class="text-gradient">AI/ML Engineer</span> and 
+                            <span class="text-gradient">NLP Researcher</span> dedicated to building 
+                            intelligent systems that make a real impact.
+                        </p>
+                        <p>
+                            Currently pursuing my M.Tech in Artificial Intelligence at 
+                            <strong>IIT Patna</strong>, I bring a unique blend of research excellence 
+                            and production-ready engineering skills. My journey includes NLP research 
+                            at premier IITs and building scalable DevOps infrastructure at Beacon Healthcare.
+                        </p>
+                        <p>
+                            I specialize in <strong>Large Language Models</strong>, <strong>Retrieval-Augmented 
+                            Generation (RAG)</strong>, and <strong>Multimodal AI</strong> systems. When I'm not 
+                            training models, I'm contributing to open-source and exploring the latest in AI safety.
+                        </p>
+                    </div>
+                    
+                    <div class="about-highlights animate-on-scroll">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <span class="window-title">harshal.py</span>
+                            <div class="highlight-content">
+                                <h4>Education</h4>
+                                <p>M.Tech AI @ IIT Patna</p>
+                            </div>
                         </div>
-                        <div class="window-content">
-<pre><code><span class="code-keyword">class</span> <span class="code-class">AIEngineer</span>:
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
-        <span class="code-param">self</span>.name = <span class="code-string">"Harshal Dharpure"</span>
-        <span class="code-param">self</span>.role = <span class="code-string">"M.Tech AI @ IIT Patna"</span>
-        <span class="code-param">self</span>.expertise = [
-            <span class="code-string">"NLP"</span>, <span class="code-string">"LLMs"</span>, <span class="code-string">"RAG"</span>,
-            <span class="code-string">"Multimodal AI"</span>, <span class="code-string">"DevOps"</span>
-        ]
-    
-    <span class="code-keyword">def</span> <span class="code-function">passion</span>(<span class="code-param">self</span>):
-        <span class="code-keyword">return</span> <span class="code-string">"Building AI that matters"</span></code></pre>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Research</h4>
+                                <p>NLP & Multimodal AI</p>
+                            </div>
                         </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Industry</h4>
+                                <p>DevOps & ML Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta animate-on-scroll">
+                        <a href="#contact" class="btn btn-primary magnetic">
+                            <span class="btn-text">Let's Connect</span>
+                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-bg"></span>
+                        </a>
+                        <a href="#" class="btn btn-ghost magnetic" onclick="downloadResume()">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -161,69 +289,91 @@
     <section id="education" class="education section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// EDUCATION</span>
-                <h2 class="section-title">Academic Journey</h2>
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Education
+                </h2>
             </div>
+            
             <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item animate-on-scroll" data-aos="fade-right">
+                    <div class="timeline-dot">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="timeline-content">
-                        <div class="edu-header">
-                            <h3>M.Tech in Artificial Intelligence</h3>
-                            <span class="edu-year">2025 – Present</span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-badge current">Currently Pursuing</div>
+                            <span class="card-year">2025 - Present</span>
                         </div>
-                        <p class="edu-institute">Indian Institute of Technology, Patna</p>
-                        <div class="edu-badge">Currently Pursuing</div>
+                        <h3 class="card-title">M.Tech in Artificial Intelligence</h3>
+                        <p class="card-institute">
+                            <i class="fas fa-university"></i>
+                            Indian Institute of Technology, Patna
+                        </p>
+                        <div class="card-tags">
+                            <span>NLP</span>
+                            <span>Deep Learning</span>
+                            <span>LLMs</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">
+                
+                <div class="timeline-item animate-on-scroll" data-aos="fade-left">
+                    <div class="timeline-dot">
                         <i class="fas fa-university"></i>
                     </div>
-                    <div class="timeline-content">
-                        <div class="edu-header">
-                            <h3>B.E. in Computer Science</h3>
-                            <span class="edu-year">2019 – 2023</span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-score">80.03%</div>
+                            <span class="card-year">2019 - 2023</span>
                         </div>
-                        <p class="edu-institute">Sipna College of Engineering and Technology</p>
-                        <div class="edu-score">
-                            <span class="score-value">80.03%</span>
-                            <span class="score-label">Aggregate</span>
+                        <h3 class="card-title">B.E. in Computer Science</h3>
+                        <p class="card-institute">
+                            <i class="fas fa-university"></i>
+                            Sipna College of Engineering and Technology
+                        </p>
+                        <div class="card-tags">
+                            <span>DSA</span>
+                            <span>DBMS</span>
+                            <span>OS</span>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">
+                
+                <div class="timeline-item animate-on-scroll" data-aos="fade-right">
+                    <div class="timeline-dot">
                         <i class="fas fa-school"></i>
                     </div>
-                    <div class="timeline-content">
-                        <div class="edu-header">
-                            <h3>Senior Secondary (Class XII)</h3>
-                            <span class="edu-year">2018</span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-score">72.3%</div>
+                            <span class="card-year">2018</span>
                         </div>
-                        <p class="edu-institute">CBSE Board</p>
-                        <div class="edu-score">
-                            <span class="score-value">72.3%</span>
-                            <span class="score-label">Percentage</span>
-                        </div>
+                        <h3 class="card-title">Senior Secondary (Class XII)</h3>
+                        <p class="card-institute">
+                            <i class="fas fa-school"></i>
+                            CBSE Board
+                        </p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">
+                
+                <div class="timeline-item animate-on-scroll" data-aos="fade-left">
+                    <div class="timeline-dot">
                         <i class="fas fa-book"></i>
                     </div>
-                    <div class="timeline-content">
-                        <div class="edu-header">
-                            <h3>Secondary (Class X)</h3>
-                            <span class="edu-year">2016</span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-score">9.2 CGPA</div>
+                            <span class="card-year">2016</span>
                         </div>
-                        <p class="edu-institute">CBSE Board</p>
-                        <div class="edu-score">
-                            <span class="score-value">9.2</span>
-                            <span class="score-label">CGPA</span>
-                        </div>
+                        <h3 class="card-title">Secondary (Class X)</h3>
+                        <p class="card-institute">
+                            <i class="fas fa-school"></i>
+                            CBSE Board
+                        </p>
                     </div>
                 </div>
             </div>
@@ -234,129 +384,184 @@
     <section id="experience" class="experience section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// EXPERIENCE</span>
-                <h2 class="section-title">Where I've Worked</h2>
+                <span class="section-number">03</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Experience
+                </h2>
             </div>
-            <div class="experience-grid">
-                <div class="exp-card featured">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <div class="company-logo">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>Beacon Healthcare Systems</h3>
-                                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> India</span>
-                            </div>
-                        </div>
-                        <span class="exp-type">Full-time</span>
-                    </div>
-                    <div class="exp-role">
-                        <h4>Product Engineer (DevOps)</h4>
-                        <span class="exp-duration">Jul 2024 – Aug 2025</span>
-                    </div>
-                    <ul class="exp-highlights">
-                        <li>Led HAProxy API routing; designed scalable infra for multi-client healthcare apps</li>
-                        <li>Automated deployments/provisioning with Ansible (standardized roles/playbooks)</li>
-                        <li>Administered JasperReports on Tomcat; tuned JVM, connectors, caches for QA/PROD</li>
-                        <li>Managed MySQL on CentOS/Rocky; automated backups/restores; performance tuning</li>
-                        <li>Built reusable VM templates and tooling for fast, secure client onboarding</li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span class="tech-tag">HAProxy</span>
-                        <span class="tech-tag">Ansible</span>
-                        <span class="tech-tag">Tomcat</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">CentOS</span>
-                    </div>
+            
+            <div class="experience-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="beacon1">
+                        <span class="tab-company">Beacon Healthcare</span>
+                        <span class="tab-role">Product Engineer</span>
+                    </button>
+                    <button class="tab-btn" data-tab="beacon2">
+                        <span class="tab-company">Beacon Healthcare</span>
+                        <span class="tab-role">Jr. Engineer</span>
+                    </button>
+                    <button class="tab-btn" data-tab="iitp">
+                        <span class="tab-company">IIT Patna</span>
+                        <span class="tab-role">NLP Research</span>
+                    </button>
+                    <button class="tab-btn" data-tab="iitgn">
+                        <span class="tab-company">IIT Gandhinagar</span>
+                        <span class="tab-role">SRIP Intern</span>
+                    </button>
                 </div>
-
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <div class="company-logo">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>Beacon Healthcare Systems</h3>
-                                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> India</span>
-                            </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="beacon1">
+                        <div class="panel-header">
+                            <h3>Product Engineer <span class="company-name">@ Beacon Healthcare Systems</span></h3>
+                            <span class="panel-duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Jul 2024 - Aug 2025
+                            </span>
+                            <span class="panel-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                India
+                            </span>
+                            <span class="panel-type devops">DevOps</span>
                         </div>
-                        <span class="exp-type">Full-time</span>
-                    </div>
-                    <div class="exp-role">
-                        <h4>Jr. Product Engineer</h4>
-                        <span class="exp-duration">May 2024 – Jun 2024</span>
-                    </div>
-                    <ul class="exp-highlights">
-                        <li>Contributed to initial MySQL and Tomcat deployments; assisted with server hardening</li>
-                        <li>Developed internal deployment documentation and operational runbooks</li>
-                        <li>Supported the DevOps team on client environment setup and automation</li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Tomcat</span>
-                        <span class="tech-tag">Linux</span>
-                    </div>
-                </div>
-
-                <div class="exp-card research">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <div class="company-logo">
-                                <i class="fas fa-flask"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>IIT Patna</h3>
-                                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Patna, India</span>
-                            </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Led HAProxy API routing; designed scalable infra for multi-client healthcare applications
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Automated deployments/provisioning with Ansible (standardized roles/playbooks)
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Administered JasperReports on Tomcat; tuned JVM, connectors, caches for QA/PROD
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Managed MySQL on CentOS/Rocky; automated backups/restores; performance tuning
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Built reusable VM templates and tooling for fast, secure client onboarding
+                            </li>
+                        </ul>
+                        <div class="panel-tech">
+                            <span>HAProxy</span>
+                            <span>Ansible</span>
+                            <span>Tomcat</span>
+                            <span>MySQL</span>
+                            <span>CentOS</span>
+                            <span>Linux</span>
                         </div>
-                        <span class="exp-type research-tag">Research</span>
                     </div>
-                    <div class="exp-role">
-                        <h4>NLP Research Intern</h4>
-                        <span class="exp-duration">Sep 2023 – Apr 2024</span>
-                    </div>
-                    <ul class="exp-highlights">
-                        <li>Prompt-Persuasive: Multimodal persuasive hateful memes detection using LLMs and PLMs</li>
-                        <li>Explored fine-tuning of pre-trained vision-language models (PVLMs) for meme detection</li>
-                        <li>Leveraged prompt-based in-context learning for improved detection performance</li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Multimodal AI</span>
-                        <span class="tech-tag">PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="exp-card research">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <div class="company-logo">
-                                <i class="fas fa-flask"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>IIT Gandhinagar</h3>
-                                <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Gandhinagar, India</span>
-                            </div>
+                    
+                    <div class="tab-panel" id="beacon2">
+                        <div class="panel-header">
+                            <h3>Jr. Product Engineer <span class="company-name">@ Beacon Healthcare Systems</span></h3>
+                            <span class="panel-duration">
+                                <i class="far fa-calendar-alt"></i>
+                                May 2024 - Jun 2024
+                            </span>
+                            <span class="panel-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                India
+                            </span>
+                            <span class="panel-type devops">DevOps</span>
                         </div>
-                        <span class="exp-type research-tag">SRIP</span>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Contributed to initial MySQL and Tomcat deployments; assisted with server hardening
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Developed internal deployment documentation and operational runbooks
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Supported the DevOps team on client environment setup and automation best practices
+                            </li>
+                        </ul>
+                        <div class="panel-tech">
+                            <span>MySQL</span>
+                            <span>Tomcat</span>
+                            <span>Linux</span>
+                            <span>Documentation</span>
+                        </div>
                     </div>
-                    <div class="exp-role">
-                        <h4>NLP Research Intern</h4>
-                        <span class="exp-duration">May 2021 – Jul 2021</span>
+                    
+                    <div class="tab-panel" id="iitp">
+                        <div class="panel-header">
+                            <h3>NLP Research Intern <span class="company-name">@ IIT Patna</span></h3>
+                            <span class="panel-duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Sep 2023 - Apr 2024
+                            </span>
+                            <span class="panel-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Patna, India
+                            </span>
+                            <span class="panel-type research">Research</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                <strong>Prompt-Persuasive:</strong> Multimodal persuasive hateful memes detection using LLMs and PLMs
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Explored fine-tuning of pre-trained vision-language models (PVLMs) for meme detection
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Leveraged prompt-based in-context learning for improved detection performance
+                            </li>
+                        </ul>
+                        <div class="panel-tech">
+                            <span>LLMs</span>
+                            <span>NLP</span>
+                            <span>Multimodal AI</span>
+                            <span>PyTorch</span>
+                            <span>Transformers</span>
+                        </div>
                     </div>
-                    <ul class="exp-highlights">
-                        <li>Conducted association tests using mBERT transformer model to analyze gender bias</li>
-                        <li>Performed WEAT to measure similarity between target and attribute words</li>
-                        <li>Implemented pipelines to compute HONEST scores using Hugging Face</li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span class="tech-tag">mBERT</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">Hugging Face</span>
-                        <span class="tech-tag">WEAT</span>
+                    
+                    <div class="tab-panel" id="iitgn">
+                        <div class="panel-header">
+                            <h3>NLP Research Intern (SRIP) <span class="company-name">@ IIT Gandhinagar</span></h3>
+                            <span class="panel-duration">
+                                <i class="far fa-calendar-alt"></i>
+                                May 2021 - Jul 2021
+                            </span>
+                            <span class="panel-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Gandhinagar, India
+                            </span>
+                            <span class="panel-type research">SRIP</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Conducted association tests using mBERT transformer model to analyze gender categories and professions
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Performed WEAT to measure similarity between target and attribute words
+                            </li>
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                Implemented pipelines to compute HONEST scores for code-mixed sentences using Hugging Face
+                            </li>
+                        </ul>
+                        <div class="panel-tech">
+                            <span>mBERT</span>
+                            <span>Transformers</span>
+                            <span>Hugging Face</span>
+                            <span>WEAT</span>
+                            <span>Bias Detection</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,39 +572,54 @@
     <section id="projects" class="projects section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// PROJECTS</span>
-                <h2 class="section-title">Featured Work</h2>
+                <span class="section-number">04</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Featured Projects
+                </h2>
             </div>
+            
             <div class="projects-grid">
-                <article class="project-card featured-project">
-                    <div class="project-visual">
-                        <div class="project-icon">
+                <article class="project-card featured animate-on-scroll">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="overlay-pattern"></div>
+                        </div>
+                        <div class="project-icon-large">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
-                        <div class="project-meta">
-                            <span class="project-label">Research Project</span>
-                            <span class="project-year">2024</span>
+                        <div class="project-top">
+                            <span class="project-label">Featured Project</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">RAG Multimodal Persuasive Memes Detection</h3>
-                        <p class="project-description">
-                            Advanced multimodal system for detecting and classifying persuasive content in memes 
-                            using state-of-the-art vision-language models.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Binary persuasion classification</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Persuasion intensity scoring (None → Slightly Positive)</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Technique identification (personification, irony, metaphors, satire)</span>
+                        <div class="project-description">
+                            <p>
+                                Advanced multimodal system for detecting and classifying persuasive content 
+                                in memes using state-of-the-art vision-language models and RAG techniques.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Binary persuasion classification</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Intensity scoring (None → Slightly Positive)</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Technique identification (irony, metaphors, satire)</span>
+                                </div>
                             </div>
                         </div>
                         <div class="project-tech">
@@ -407,32 +627,42 @@
                             <span>LLMs</span>
                             <span>Vision-Language Models</span>
                             <span>PyTorch</span>
+                            <span>Transformers</span>
                         </div>
                     </div>
                 </article>
-
-                <article class="project-card">
-                    <div class="project-visual">
-                        <div class="project-icon">
+                
+                <article class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="overlay-pattern"></div>
+                        </div>
+                        <div class="project-icon-large">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
-                        <div class="project-meta">
+                        <div class="project-top">
                             <span class="project-label">AI Application</span>
-                            <span class="project-year">2024</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">AI-based FAQ Chatbot</h3>
-                        <p class="project-description">
-                            Conversational chatbot designed to answer frequently asked questions by intelligently 
-                            retrieving and responding to user queries with context-aware responses.
-                        </p>
+                        <div class="project-description">
+                            <p>
+                                Conversational chatbot designed to answer frequently asked questions by 
+                                intelligently retrieving and responding to user queries with context-aware responses.
+                            </p>
+                        </div>
                         <div class="project-tech">
                             <span>NLP</span>
                             <span>Transformers</span>
                             <span>Python</span>
                             <span>RAG</span>
+                            <span>FastAPI</span>
                         </div>
                     </div>
                 </article>
@@ -444,77 +674,167 @@
     <section id="skills" class="skills section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// SKILLS</span>
-                <h2 class="section-title">Tech Arsenal</h2>
+                <span class="section-number">05</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Skills & Technologies
+                </h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category">
+            
+            <div class="skills-showcase">
+                <div class="skills-category animate-on-scroll">
                     <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Programming & Scripting</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Shell Scripting</span>
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category highlight-category">
-                    <div class="category-header">
-                        <div class="category-icon">
+                        <div class="category-icon ai">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3>AI/ML & NLP</h3>
+                        <div class="category-info">
+                            <h3>AI/ML & NLP</h3>
+                            <span>Core Expertise</span>
+                        </div>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag featured">LLMs</span>
-                        <span class="skill-tag featured">NLP</span>
-                        <span class="skill-tag featured">RAG</span>
-                        <span class="skill-tag">Multimodal AI</span>
-                        <span class="skill-tag">CNN</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">Hugging Face</span>
+                    <div class="skills-grid">
+                        <div class="skill-item featured">
+                            <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                            <span>LLMs</span>
+                        </div>
+                        <div class="skill-item featured">
+                            <div class="skill-icon"><i class="fas fa-language"></i></div>
+                            <span>NLP</span>
+                        </div>
+                        <div class="skill-item featured">
+                            <div class="skill-icon"><i class="fas fa-search"></i></div>
+                            <span>RAG</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-images"></i></div>
+                            <span>Multimodal AI</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <span>Transformers</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                            <span>CNN</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-magic"></i></div>
+                            <span>Prompt Engineering</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-smile"></i></div>
+                            <span>Hugging Face</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="skill-category">
+                
+                <div class="skills-category animate-on-scroll">
                     <div class="category-header">
-                        <div class="category-icon">
+                        <div class="category-icon dev">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Programming</h3>
+                            <span>Languages & Frameworks</span>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-copyright"></i></div>
+                            <span>C/C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                            <span>Shell Scripting</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+                            <span>Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon devops">
                             <i class="fas fa-server"></i>
                         </div>
-                        <h3>DevOps & Deployment</h3>
+                        <div class="category-info">
+                            <h3>DevOps & Cloud</h3>
+                            <span>Infrastructure & Deployment</span>
+                        </div>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Jenkins</span>
-                        <span class="skill-tag">Ansible</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">AWS (S3, IAM)</span>
-                        <span class="skill-tag">GitHub Actions</span>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-dharmachakra"></i></div>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-play-circle"></i></div>
+                            <span>Ansible</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                            <span>CI/CD</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-github"></i></div>
+                            <span>GitHub Actions</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="skill-category">
+                
+                <div class="skills-category animate-on-scroll">
                     <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-code-branch"></i>
+                        <div class="category-icon tools">
+                            <i class="fas fa-tools"></i>
                         </div>
-                        <h3>Tools & Platforms</h3>
+                        <div class="category-info">
+                            <h3>Tools & Databases</h3>
+                            <span>Development Environment</span>
+                        </div>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">HAProxy</span>
-                        <span class="skill-tag">Tomcat</span>
-                        <span class="skill-tag">MySQL</span>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-random"></i></div>
+                            <span>HAProxy</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-cat"></i></div>
+                            <span>Tomcat</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -525,56 +845,64 @@
     <section id="awards" class="awards section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// ACHIEVEMENTS</span>
-                <h2 class="section-title">Awards & Honors</h2>
+                <span class="section-number">06</span>
+                <h2 class="section-title">
+                    <span class="title-line"></span>
+                    Awards & Achievements
+                </h2>
             </div>
+            
             <div class="awards-grid">
-                <div class="award-card">
+                <div class="award-card animate-on-scroll">
+                    <div class="award-ribbon">2022</div>
                     <div class="award-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <div class="award-content">
-                        <span class="award-year">2022</span>
                         <h3>Semi-finalist</h3>
-                        <p>Smart India Hackathon</p>
+                        <p class="award-event">Smart India Hackathon</p>
                         <span class="award-org">Government of India</span>
                     </div>
+                    <div class="award-glow"></div>
                 </div>
-
-                <div class="award-card">
+                
+                <div class="award-card animate-on-scroll">
+                    <div class="award-ribbon">2022</div>
                     <div class="award-icon">
                         <i class="fas fa-car"></i>
                     </div>
                     <div class="award-content">
-                        <span class="award-year">2022</span>
                         <h3>Top 10%</h3>
-                        <p>AWS Deepracer League</p>
+                        <p class="award-event">AWS Deepracer League</p>
                         <span class="award-org">Global Open Division</span>
                     </div>
+                    <div class="award-glow"></div>
                 </div>
-
-                <div class="award-card">
+                
+                <div class="award-card animate-on-scroll">
+                    <div class="award-ribbon">2021</div>
                     <div class="award-icon">
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="award-content">
-                        <span class="award-year">2021</span>
                         <h3>Most Popular Team</h3>
-                        <p>Sparkathon</p>
+                        <p class="award-event">Sparkathon</p>
                         <span class="award-org">National Hackathon</span>
                     </div>
+                    <div class="award-glow"></div>
                 </div>
-
-                <div class="award-card">
+                
+                <div class="award-card animate-on-scroll">
+                    <div class="award-ribbon">2021</div>
                     <div class="award-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="award-content">
-                        <span class="award-year">2021</span>
                         <h3>Top 20</h3>
-                        <p>Adobe Analytics Challenge</p>
+                        <p class="award-event">Adobe Analytics Challenge</p>
                         <span class="award-org">4000+ Global Teams</span>
                     </div>
+                    <div class="award-glow"></div>
                 </div>
             </div>
         </div>
@@ -583,49 +911,78 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <div class="contact-content">
-                <div class="section-header">
-                    <span class="section-tag">// CONTACT</span>
-                    <h2 class="section-title">Let's Build Something Amazing</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll">
+                    <div class="section-header left">
+                        <span class="section-number">07</span>
+                        <h2 class="section-title">
+                            <span class="title-line"></span>
+                            Let's Work Together
+                        </h2>
+                    </div>
+                    <p class="contact-description">
+                        I'm always excited to discuss new opportunities in AI/ML, research collaborations, 
+                        or interesting projects. Whether you have a question or just want to say hi, 
+                        I'll try my best to get back to you!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <a href="mailto:harshaldharpure9922@gmail.com" class="contact-item">
+                            <div class="item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Email</span>
+                                <span class="item-value">harshaldharpure9922@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+918080071581" class="contact-item">
+                            <div class="item-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Phone</span>
+                                <span class="item-value">+91-8080071581</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/harshaldharpure" target="_blank" class="contact-item">
+                            <div class="item-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">LinkedIn</span>
+                                <span class="item-value">linkedin.com/in/harshaldharpure</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/harshalDharpure" target="_blank" class="contact-item">
+                            <div class="item-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">GitHub</span>
+                                <span class="item-value">github.com/harshalDharpure</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <p class="contact-intro">
-                    Interested in collaborating on AI/ML research, open-source projects, or just want to say hi? 
-                    I'm always open to discussing new opportunities and ideas.
-                </p>
-                <div class="contact-grid">
-                    <a href="mailto:harshaldharpure9922@gmail.com" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                
+                <div class="contact-cta animate-on-scroll">
+                    <div class="cta-card">
+                        <div class="cta-icon">
+                            <i class="fas fa-paper-plane"></i>
                         </div>
-                        <h3>Email</h3>
-                        <p>harshaldharpure9922@gmail.com</p>
-                    </a>
-                    <a href="tel:+918080071581" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone</h3>
-                        <p>+91-8080071581</p>
-                    </a>
-                    <a href="https://linkedin.com/in/harshaldharpure" target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with me</p>
-                    </a>
-                    <a href="https://github.com/harshalDharpure" target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Check my repos</p>
-                    </a>
+                        <h3>Ready to Start a Project?</h3>
+                        <p>Let's create something amazing together!</p>
+                        <a href="mailto:harshaldharpure9922@gmail.com" class="btn btn-primary btn-large magnetic">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-bg"></span>
+                        </a>
+                    </div>
                 </div>
-                <a href="mailto:harshaldharpure9922@gmail.com" class="btn btn-primary btn-large">
-                    <span>Say Hello</span>
-                    <i class="fas fa-paper-plane"></i>
-                </a>
             </div>
         </div>
     </section>
@@ -635,22 +992,38 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-bracket">&lt;</span>HD<span class="logo-bracket">/&gt;</span>
-                    <p>Designed & Built with ❤️ by Harshal Dharpure</p>
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-text">HD</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p>Designed & Built with <span class="heart">❤</span> by Harshal Dharpure</p>
                 </div>
-                <div class="footer-links">
-                    <a href="https://linkedin.com/in/harshaldharpure" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/harshalDharpure" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:harshaldharpure9922@gmail.com"><i class="fas fa-envelope"></i></a>
+                
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/harshaldharpure" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/harshalDharpure" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:harshaldharpure9922@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Harshal Dharpure. All rights reserved.</p>
+                <p class="made-with">Made with passion for AI & innovation</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
-
