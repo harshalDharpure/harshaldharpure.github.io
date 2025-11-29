@@ -17,14 +17,14 @@ function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     
-    // Check for saved preference or system preference
+    // Check for saved preference, otherwise default to light mode
     const savedTheme = localStorage.getItem('theme');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     if (savedTheme) {
         html.setAttribute('data-theme', savedTheme);
-    } else if (systemDark) {
-        html.setAttribute('data-theme', 'dark');
+    } else {
+        // Default to light mode
+        html.setAttribute('data-theme', 'light');
     }
     
     themeToggle.addEventListener('click', () => {
